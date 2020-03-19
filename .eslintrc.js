@@ -16,5 +16,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "camelcase": "off",
+    // "@typescript-eslint/camelcase": ["error", { "properties": "never" }]
   }
 }
