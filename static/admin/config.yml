@@ -9,10 +9,10 @@ media_folder: static/uploads
 public_folder: /uploads
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
+  - name: 'projects'
+    label: 'Projects'
     format: 'json'
-    folder: 'assets/content/blog'
+    folder: 'assets/content/projects'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
