@@ -28,23 +28,32 @@
       top
       direction="bottom"
       open-on-hover
-      transition="v-slide-y-transition"
+      transition="scale-transition"
       style="position: absolute;"
     >
       <template v-slot:activator>
-        <v-btn v-model="fab" primary fab>
-          <v-icon v-if="fab">mdi-close</v-icon>
-          <v-icon v-else>input</v-icon>
+        <v-btn v-model="fab" color="primary" fab>
+          <v-icon v-if="fab" color="secondary">mdi-close</v-icon>
+          <v-icon v-else color="secondary">input</v-icon>
         </v-btn>
       </template>
-      <v-btn fab dark small color="green">
+      <!-- <v-btn fab dark small color="green">
         <v-icon>mdi-pencil</v-icon>
+      </v-btn> -->
+      <!-- <p class="home">Home</p> -->
+      <!-- <p class="work">Work</p>
+      <p class="play">Play</p> -->
+      <v-btn class="home" text dark small color="secondary">
+        Home
+        <!-- <v-icon>mdi-plus</v-icon> -->
       </v-btn>
-      <v-btn fab dark small color="indigo">
-        <v-icon>mdi-plus</v-icon>
+      <v-btn class="work" text dark small flat>
+        Work
+        <!-- <v-icon>mdi-delete</v-icon> -->
       </v-btn>
-      <v-btn fab dark small color="red">
-        <v-icon>mdi-delete</v-icon>
+      <v-btn class="play" text dark small>
+        Play
+        <!-- <v-icon>mdi-delete</!-->
       </v-btn>
     </v-speed-dial>
     <!-- <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
@@ -65,7 +74,7 @@
   </v-app>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   data() {
     return {
@@ -93,8 +102,8 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-.app_main_container {
+<style lang="scss">
+.v-application.app_main_container {
   background-image: url('~assets/vegas.jpg');
   background-position: center;
   background-size: cover;

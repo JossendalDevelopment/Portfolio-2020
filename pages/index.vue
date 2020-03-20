@@ -4,7 +4,7 @@
     <v-flex
       xs3
       class="right-bar"
-      :style="{ backgroundColor: $vuetify.theme.primary }"
+      :style="{ backgroundColor: $vuetify.theme.currentTheme.primary }"
     >
       <div class="overhyped-tag-container">
         <p class="overhyped-tag-line">driven</p>
@@ -12,7 +12,10 @@
         <p class="overhyped-tag-line">defiant</p>
         <p class="overhyped-tag-line">design</p>
       </div>
-      <p :style="{ color: $vuetify.theme.accent }" class="vertical-text">
+      <p
+        :style="{ color: $vuetify.theme.currentTheme.accent }"
+        class="vertical-text"
+      >
         Development
       </p>
       <h1 class="text-headline">Jossendal</h1>
@@ -20,18 +23,11 @@
         Specializing in app development, design, and user experience.
       </p>
     </v-flex>
-    <!-- <v-flex xs12 sm8 md6>
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-    </v-flex>-->
   </v-layout>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  components: {},
   head() {
     return {
       script: [

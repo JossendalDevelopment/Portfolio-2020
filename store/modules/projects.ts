@@ -1,5 +1,5 @@
 import { Store } from 'vuex'
-import { IProject } from '../Interfaces/IProject'
+import { IProject } from '../../Interfaces/IProject'
 
 interface IProjectsState {
   projects: IProject[]
@@ -9,6 +9,10 @@ export const state = (): IProjectsState => ({
   projects: []
 })
 
+export const getters = (state: IProjectsState): IProject[] => {
+  return state.projects
+}
+
 export const mutations = {
   setProjects(state: IProjectsState, list: IProject[]) {
     state.projects = list
@@ -16,7 +20,7 @@ export const mutations = {
 }
 
 export const actions = {
-  async nuxtServerInit({ commit }: Store<IProject>) {
+  async fetchProjects({ commit }: Store<IProject>) {
     const files = await require.context(
       '~/assets/content/projects/',
       false,
@@ -27,6 +31,7 @@ export const actions = {
       res.slug = key.slice(2, -5)
       return res
     })
+    console.log('PROJECTS', projects)
     await commit('setProjects', projects)
   }
 }

@@ -25,6 +25,10 @@ export default {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
+      },
+      {
+        href: 'https://fonts.googleapis.com/css?family=Playfair+Display:400i',
+        rel: 'stylesheet'
       }
     ]
   },
@@ -39,7 +43,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/projects.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -64,14 +68,17 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
+    treeShake: true,
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      options: { customProperties: true },
+      // dark: true,
+      light: true,
       themes: {
-        dark: {
-          primary: '#ee44aa',
-          secondary: '#424242',
-          accent: '#82B1FF',
+        light: {
+          primary: '#fff3d8',
+          secondary: '#363636',
+          accent: '#fd7752',
           error: '#FF5252',
           info: '#2196F3',
           success: '#4CAF50',

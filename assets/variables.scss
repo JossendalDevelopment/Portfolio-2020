@@ -6,3 +6,41 @@ html {
   // defines what 1 rem is. 1rem == 10px;
   font-size: 62.5%;
 }
+.home {
+  animation: moveInRight 0.5s ease-out;
+}
+.work {
+  animation: moveInRight 0.5s ease-out 0.1s;
+}
+.play {
+  animation: moveInRight 0.5s ease-out 0.2s;
+}
+
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
