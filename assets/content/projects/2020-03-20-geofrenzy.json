@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "date": "2020-03-20T18:55:12.990Z",
+  "title": "GeoFrenzy",
+  "description": "Geofencing for everyone. Work included sitewide redesign and rebuild of whitelabel portal using Vue.js. Start defining your own rules on your own spaces today. All you need is a geodomain to get started.",
+  "type": "work",
+  "url": "https://www.smartfences.place",
+  "tech": [
+    "Vue.js",
+    "ArcGIS",
+    "python-flask"
+  ]
+}
