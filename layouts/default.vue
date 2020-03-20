@@ -36,23 +36,17 @@
           <v-icon v-else color="secondary">input</v-icon>
         </v-btn>
       </template>
-      <nuxt-link to="/">
-        <v-btn class="home" text dark small color="secondary">
-          Home
-          <!-- <v-icon>mdi-plus</v-icon> -->
-        </v-btn>
+      <nuxt-link to="/" class="home_link">
+        Home
+        <!-- <v-icon>mdi-plus</v-icon> -->
       </nuxt-link>
-      <nuxt-link to="/work">
-        <v-btn class="work" text dark small color="secondary">
-          Work
-          <!-- <v-icon>mdi-delete</v-icon> -->
-        </v-btn>
+      <nuxt-link to="/work" class="work_link">
+        Work
+        <!-- <v-icon>mdi-delete</v-icon> -->
       </nuxt-link>
-      <nuxt-link to="/play">
-        <v-btn class="play" text dark small color="secondary">
-          Play
-          <!-- <v-icon>mdi-delete</!-->
-        </v-btn>
+      <nuxt-link to="/play" class="play_link">
+        Play
+        <!-- <v-icon>mdi-delete</!-->
       </nuxt-link>
     </v-speed-dial>
     <!-- <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
@@ -104,8 +98,5 @@ export default {
 <style lang="scss">
 .v-application.app_main_container {
   min-height: 100%;
-}
-v-btn {
-  font-size: 2rem;
 }
 </style>

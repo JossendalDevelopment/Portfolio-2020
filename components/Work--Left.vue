@@ -65,18 +65,6 @@ export default {
 
     // start observing
     changelogItems.forEach((item) => this.observer.observe(item))
-    // console.log("STORE", this.$store)
-    // if(this.$store.getters.githubApiResponse) {
-    //     this.repos = this.$store.getters.githubApiResponse;
-    // } else {
-    // get my github data / first 20 repos
-    // need to call twice to get all then sort and slice to get recent
-    // then finally set up observer
-  },
-  methods: {
-    // formatDate(date) {
-    //   return dateFns.format(date, "MM/DD/YY");
-    // }
   }
 }
 </script>
@@ -89,8 +77,8 @@ $changelogLeftSpacing: 120px;
 }
 
 .line {
-  width: 2px;
-  top: 2px;
+  width: 0.2rem;
+  top: 0.2rem;
   display: block;
   height: 100%;
   position: absolute;
@@ -102,7 +90,8 @@ $changelogLeftSpacing: 120px;
   position: relative;
   display: flex;
   padding-left: $changelogLeftSpacing;
-  margin-bottom: 200px;
+  margin-bottom: 14rem;
+  font-size: 1.6rem;
 
   &:before,
   .date,
@@ -116,7 +105,7 @@ $changelogLeftSpacing: 120px;
     content: '';
     display: block;
     position: absolute;
-    top: 4px;
+    top: 0.4rem;
     left: $changelogLeftSpacing - 21px;
     background: var(--v-primary-base);
     border: 2px solid black;
@@ -143,7 +132,7 @@ $changelogLeftSpacing: 120px;
 }
 .repo-name {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: var(--v-accent-base);
 }
 .repo-desc {

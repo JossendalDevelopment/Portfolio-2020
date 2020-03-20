@@ -39,7 +39,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/animations.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -88,6 +88,7 @@ export default {
         light: {
           primary: '#fff3d8',
           secondary: '#363636',
+          anchor: '#363636',
           accent: '#fd7752',
           brown: '#383432',
           error: '#FF5252',
@@ -105,6 +106,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    // extend(config, ctx) {}
   }
 }

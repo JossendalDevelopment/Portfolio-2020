@@ -4,6 +4,9 @@
       <div class="left">
         <div class="title_wrapper">
           <h1 class="work">Wo<span>rk.</span></h1>
+          <span ref="scrollarrow" class="scroll-arrow">
+            <span class="arrow-point">&larr;</span> scroll
+          </span>
         </div>
         <work--left />
       </div>
@@ -21,12 +24,29 @@
   </v-container>
 </template>
 <script lang="ts">
+import throttle from 'lodash/throttle'
 import WorkLeft from '../components/Work--Left.vue'
+
 export default {
   components: {
     'work--left': WorkLeft
-  }
+  },
   // transition: 'slide-left'
+  mounted() {
+    window.addEventListener('scroll', throttle(this.handleScroll, 200))
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      if (window.scrollY < 5) {
+        ;(this.$refs.scrollarrow as HTMLElement).classList.remove('hide')
+      } else if (window.scrollY < 20) {
+        ;(this.$refs.scrollarrow as HTMLElement).classList.add('hide')
+      }
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -40,19 +60,18 @@ export default {
   }
 }
 .left {
-  // background-color: var(--v-brown-base);
   width: 50%;
   height: 100%;
   .title_wrapper {
     position: relative;
     height: 100vh;
-  }
-  .work {
-    position: absolute;
-    top: 35%;
-    right: -12rem;
-    font-size: 10rem;
-    color: var(--v-accent-base);
+    .work {
+      position: absolute;
+      top: 35%;
+      right: -16.6rem;
+      font-size: 14rem;
+      color: var(--v-accent-base);
+    }
   }
   span {
     color: var(--v-secondary-base);

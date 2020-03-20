@@ -4,22 +4,28 @@
 // $font-size-root: 20px;
 html {
   // defines what 1 rem is. 1rem == 10px;
-  font-size: 62.5%;
+  font-size: 62.5% !important;
 }
 a {
   text-decoration: none;
 }
-.home .work .play {
+.home_link, .work_link, .play_link {
   font-size: 2rem;
+  animation-fill-mode: backwards;
+  width: 100%;
+  text-align: center;
+  &:hover {
+    background: linear-gradient(180deg, var(--v-primary-base), 50%, #fa795544 50%);
+  }
 }
-.home {
+.home_link {
   animation: moveInRight 0.5s ease-out;
 }
-.work {
-  animation: moveInRight 0.5s ease-out 0.1s;
+.work_link {
+  animation: moveInRight 0.52s ease-out;
 }
-.play {
-  animation: moveInRight 0.5s ease-out 0.2s;
+.play_link {
+  animation: moveInRight 0.54s ease-out;
 }
 
 .page-enter-active,
@@ -45,30 +51,21 @@ a {
   transform: translate(-3rem, 0);
 }
 
-@keyframes moveInLeft {
-  0% {
+.scroll-arrow {
+  color: #444;
+  position: absolute;
+  bottom: 5rem;
+  right: 1rem;
+  transform: rotate(-90deg);
+  transition: opacity 0.5s, bottom 0.75s;
+  &.hide {
     opacity: 0;
-    transform: translateX(-10rem);
-  }
-  80% {
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+    bottom: 7rem;
   }
 }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  80% {
-    transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.arrow-point {
+  position: relative;
+  left: 0;
+  top: 1px;
+  animation: bounceVertical 1.7s infinite;
 }

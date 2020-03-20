@@ -31,7 +31,6 @@ export const actions = {
       res.slug = key.slice(2, -5)
       return res
     })
-    console.log('PROJECTS', projects)
     await commit('setProjects', projects)
   }
 }
