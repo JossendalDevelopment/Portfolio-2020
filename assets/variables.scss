@@ -6,6 +6,12 @@ html {
   // defines what 1 rem is. 1rem == 10px;
   font-size: 62.5%;
 }
+a {
+  text-decoration: none;
+}
+.home .work .play {
+  font-size: 2rem;
+}
 .home {
   animation: moveInRight 0.5s ease-out;
 }
@@ -16,6 +22,28 @@ html {
   animation: moveInRight 0.5s ease-out 0.2s;
 }
 
+.page-enter-active,
+.page-leave-active,
+.layout-enter-active, 
+.layout-leave-active {
+  transition: opacity .5s
+}
+.page-enter,
+.page-leave-active,
+.layout-enter, 
+.layout-leave-active {
+  opacity: 0
+}
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(3rem, 0);
+}
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-3rem, 0);
+}
 
 @keyframes moveInLeft {
   0% {

@@ -54,15 +54,25 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
+  proxy: {
+    '/api/': {
+      target: 'https://api.example.com/',
+      pathRewrite: { '^/api/': '' },
+      changeOrigin: true
+    }
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -79,6 +89,7 @@ export default {
           primary: '#fff3d8',
           secondary: '#363636',
           accent: '#fd7752',
+          brown: '#383432',
           error: '#FF5252',
           info: '#2196F3',
           success: '#4CAF50',

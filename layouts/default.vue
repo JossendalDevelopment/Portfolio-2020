@@ -18,7 +18,7 @@
       </v-btn>
     </v-app-bar>-->
     <v-content>
-      <v-container fluid style="height: 100%;">
+      <v-container fluid style="height: 100%; padding: 0;">
         <nuxt />
       </v-container>
     </v-content>
@@ -27,9 +27,8 @@
       left
       top
       direction="bottom"
-      open-on-hover
       transition="scale-transition"
-      style="position: absolute;"
+      style="position: fixed;"
     >
       <template v-slot:activator>
         <v-btn v-model="fab" color="primary" fab>
@@ -37,24 +36,24 @@
           <v-icon v-else color="secondary">input</v-icon>
         </v-btn>
       </template>
-      <!-- <v-btn fab dark small color="green">
-        <v-icon>mdi-pencil</v-icon>
-      </v-btn> -->
-      <!-- <p class="home">Home</p> -->
-      <!-- <p class="work">Work</p>
-      <p class="play">Play</p> -->
-      <v-btn class="home" text dark small color="secondary">
-        Home
-        <!-- <v-icon>mdi-plus</v-icon> -->
-      </v-btn>
-      <v-btn class="work" text dark small flat>
-        Work
-        <!-- <v-icon>mdi-delete</v-icon> -->
-      </v-btn>
-      <v-btn class="play" text dark small>
-        Play
-        <!-- <v-icon>mdi-delete</!-->
-      </v-btn>
+      <nuxt-link to="/">
+        <v-btn class="home" text dark small color="secondary">
+          Home
+          <!-- <v-icon>mdi-plus</v-icon> -->
+        </v-btn>
+      </nuxt-link>
+      <nuxt-link to="/work">
+        <v-btn class="work" text dark small color="secondary">
+          Work
+          <!-- <v-icon>mdi-delete</v-icon> -->
+        </v-btn>
+      </nuxt-link>
+      <nuxt-link to="/play">
+        <v-btn class="play" text dark small color="secondary">
+          Play
+          <!-- <v-icon>mdi-delete</!-->
+        </v-btn>
+      </nuxt-link>
     </v-speed-dial>
     <!-- <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list>
@@ -104,8 +103,9 @@ export default {
 </script>
 <style lang="scss">
 .v-application.app_main_container {
-  background-image: url('~assets/vegas.jpg');
-  background-position: center;
-  background-size: cover;
+  min-height: 100%;
+}
+v-btn {
+  font-size: 2rem;
 }
 </style>

@@ -28,6 +28,7 @@
 
 <script lang="ts">
 export default {
+  // transition: 'slide-left',
   head() {
     return {
       script: [
@@ -41,45 +42,50 @@ export default {
 .inner-container {
   height: 100%;
   padding: 4rem;
+  background-image: url('~assets/vegas.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 .right-bar {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  width: 250px;
+  width: 25rem;
 }
 .overhyped-tag-container {
   position: absolute;
-  top: 30px;
-  left: -45px;
+  top: 3rem;
+  left: -4.5rem;
 }
 .overhyped-tag-line {
   font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  margin: -10px 0;
+  font-size: 4rem;
+  margin: -1rem 0;
 }
 .text-headline {
   font-family: AvenirNext, Avenir, Helvetica, Arial, sans-serif;
   font-display: auto;
   position: absolute;
-  right: 20px;
-  bottom: 40px;
+  right: 2rem;
+  bottom: 8rem;
   font-size: 12rem;
 }
 .text-sub-headline {
   font-family: 'Playfair Display', serif;
   font-display: auto;
   position: absolute;
-  bottom: 20px;
-  font-size: 16px;
+  bottom: 2rem;
+  font-size: 1.6rem;
   margin: 0 8%;
 }
 .vertical-text {
   font-family: AvenirNext, Avenir, Helvetica, Arial, sans-serif;
   position: absolute;
-  bottom: 255px;
-  right: 12px;
+  bottom: 25rem;
+  right: 1.2rem;
   writing-mode: tb-rl;
   transform: rotate(-180deg);
   font-size: 3rem;
@@ -88,10 +94,10 @@ export default {
 @media only screen and (max-width: 960px) {
   .text-headline {
     font-size: 8rem;
-    bottom: 60px;
+    bottom: 6rem;
   }
   .vertical-text {
-    bottom: 200px;
+    bottom: 20rem;
   }
 }
 @media only screen and (max-width: 775px) {
