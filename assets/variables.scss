@@ -9,24 +9,30 @@ html {
 a {
   text-decoration: none;
 }
-.home_link, .work_link, .play_link {
+.home-link, .work-link, .play-link {
   font-size: 2rem;
   animation-fill-mode: backwards;
   width: 100%;
   text-align: center;
   &:hover {
-    background: linear-gradient(180deg, var(--v-primary-base), 50%, #fa795544 50%);
+    background: linear-gradient(180deg, var(--v-accent-lighten1), 50%, rgba(0,0,0,0%) 50%);
   }
 }
-.home_link {
-  animation: moveInRight 0.5s ease-out;
+.animate-left {
+  animation: moveInRightLong 0.8s ease-out;
 }
-.work_link {
-  animation: moveInRight 0.52s ease-out;
+.animate-right{
+  animation: moveInLeftLong 0.8s ease-out;
 }
-.play_link {
-  animation: moveInRight 0.54s ease-out;
-}
+// .home-link {
+//   animation: moveInRight 0.5s ease-out;
+// }
+// .work-link {
+//   animation: moveInRight 0.52s ease-out;
+// }
+// .play-link {
+//   animation: moveInRight 0.54s ease-out;
+// }
 
 .page-enter-active,
 .page-leave-active,

@@ -27,8 +27,13 @@
 </template>
 
 <script lang="ts">
+import { Context } from 'vm'
 export default {
   // transition: 'slide-left',
+  asyncData(context: Context) {
+    console.log(context)
+    // send config for the fab button to vuex
+  },
   head() {
     return {
       script: [
@@ -38,7 +43,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .inner-container {
   height: 100%;
   padding: 4rem;
@@ -93,7 +98,7 @@ export default {
 
 @media only screen and (max-width: 960px) {
   .text-headline {
-    font-size: 8rem;
+    font-size: 10rem;
     bottom: 6rem;
   }
   .vertical-text {
@@ -102,36 +107,45 @@ export default {
 }
 @media only screen and (max-width: 775px) {
   .text-sub-headline {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 640px) {
   .text-headline {
-    font-size: 6rem;
+    font-size: 8rem;
   }
   .vertical-text {
-    bottom: 170px;
+    bottom: 17rem;
     font-size: 2.2rem;
   }
   .text-sub-headline {
-    left: -60px;
+    left: -6rem;
   }
 }
 @media only screen and (max-width: 575px) {
   .overhyped-tag-container {
-    left: -70px;
+    left: -5rem;
+  }
+  .overhyped-tag-line {
+    font-size: 3rem;
+  }
+  .right-bar {
+    width: 20rem;
   }
 }
 @media only screen and (max-width: 450px) {
   .text-headline {
-    font-size: 5rem;
+    font-size: 8rem;
   }
   .text-sub-headline {
-    left: -80px;
+    left: -8rem;
   }
   .vertical-text {
-    bottom: 150px;
+    bottom: 15rem;
     font-size: 2rem;
+  }
+  .right-bar {
+    width: 16rem;
   }
 }
 </style>

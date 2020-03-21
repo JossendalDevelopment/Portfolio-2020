@@ -1,5 +1,5 @@
 <template>
-  <v-app dark class="app_main_container">
+  <v-app dark class="app-main-container">
     <!-- <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-btn icon @click.stop="miniVariant = !miniVariant">
@@ -36,34 +36,19 @@
           <v-icon v-else color="secondary">input</v-icon>
         </v-btn>
       </template>
-      <nuxt-link to="/" class="home_link">
+      <nuxt-link to="/" class="home-link">
         Home
         <!-- <v-icon>mdi-plus</v-icon> -->
       </nuxt-link>
-      <nuxt-link to="/work" class="work_link">
+      <nuxt-link to="/work" class="work-link">
         Work
         <!-- <v-icon>mdi-delete</v-icon> -->
       </nuxt-link>
-      <nuxt-link to="/play" class="play_link">
+      <nuxt-link to="/play" class="play-link">
         Play
         <!-- <v-icon>mdi-delete</!-->
       </nuxt-link>
     </v-speed-dial>
-    <!-- <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>-->
   </v-app>
 </template>
 
@@ -96,7 +81,7 @@ export default {
 }
 </script>
 <style lang="scss">
-.v-application.app_main_container {
+.v-application.app-main-container {
   min-height: 100%;
 }
 </style>

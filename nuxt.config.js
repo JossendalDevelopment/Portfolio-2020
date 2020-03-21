@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   mode: 'universal',
   /*
@@ -47,7 +49,16 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/vuetify',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: process.env.GOOGLE_ANALYTICS_ID
+      }
+    ]
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -66,6 +77,11 @@ export default {
       changeOrigin: true
     }
   },
+  /*
+   ** dotenv config
+   ** https://github.com/nuxt-community/dotenv-module
+   */
+  dotenv: {},
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
