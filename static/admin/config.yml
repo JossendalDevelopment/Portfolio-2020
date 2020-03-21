@@ -18,7 +18,8 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Active", name: "active", widget: "boolean", default: true}
+      - {label: "Active", name: "active", widget: "boolean", default: true, required: false}
+      - {label: "Priority", name: "priority", widget: "number", default: null, required: false}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
@@ -37,13 +38,13 @@ collections:
           }
         }
       - { 
-          label: 'Featured Image', 
-          name: 'featured_image', 
+          label: 'Featured Images', 
+          name: 'featured_images', 
           widget: 'image', 
           required: false,
           media_library: {
             config: {
-              multiple: false
+              multiple: true
             }
           }
         }

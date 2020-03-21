@@ -1,17 +1,20 @@
 <template>
   <v-container fluid class="container">
     <work--top />
-    <work--left />
+    <work--recents />
+    <work--clients />
   </v-container>
 </template>
 <script>
 import WorkTop from '../components/Work--Top.vue'
-import WorkLeft from '../components/Work--Left.vue'
+import WorkRecents from '../components/Work--Recents.vue'
+import WorkClients from '../components/Work--Clients.vue'
 
 export default {
   components: {
     'work--top': WorkTop,
-    'work--left': WorkLeft
+    'work--recents': WorkRecents,
+    'work--clients': WorkClients
   },
   asyncData(context) {
     console.log(context)
@@ -30,7 +33,6 @@ export default {
 <style lang="scss" scoped>
 .container {
   background-color: var(--v-primary-base);
-  height: 100%;
   margin: 0;
   padding: 1%;
 }

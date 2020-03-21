@@ -1,41 +1,37 @@
 <template>
-  <v-layout column align-center>
-    <!-- <v-layout align-center style="position:relative;">
-    </v-layout> -->
-    <div v-if="projects.length > 0" class="changelog-list">
-      <div class="line"></div>
-      <div
-        v-for="repo in projects"
-        :key="repo.title"
-        class="changelog-item not-showing"
-      >
-        <!-- <div class="date" v-if="repo.pushed_at">
-          {{ formatDate(repo.pushed_at) }}
-        </div> -->
-        <div style="flex-direction: column;">
-          <p class="repo-name">{{ repo.title }}</p>
-          <p class="repo-desc">{{ repo.description }}</p>
+  <v-container fluid>
+    <v-row class="justify-center">
+      <h3 style="font-size: 3rem; color: var(--v-secondary-base)">
+        Recent Projects
+      </h3>
+    </v-row>
+    <v-row class="align-center">
+      <v-col>
+        <div v-if="projects.length > 0" class="changelog-list">
+          <div class="line"></div>
+          <div
+            v-for="repo in projects"
+            :key="repo.title"
+            class="changelog-item not-showing"
+          >
+            <div style="flex-direction: column;">
+              <p class="repo-name">{{ repo.title }}</p>
+              <p class="repo-desc">{{ repo.description }}</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div v-else>
-      <p class="error-message">
-        Sorry, the dev team must be out to lunch or something... Check back
-        later.
-      </p>
-    </div>
-  </v-layout>
+        <div v-else>
+          <p class="error-message">
+            Sorry, the dev team must be out to lunch or something... Check back
+            later.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 <script>
-// import axios from "axios";
-// import dateFns from "date-fns";
-
-// import SquareSpinner from "./SquareSpinner.vue";
-
 export default {
-  // components: {
-  //   "square-spinner": SquareSpinner
-  // },
   data() {
     return {
       repos: [],
