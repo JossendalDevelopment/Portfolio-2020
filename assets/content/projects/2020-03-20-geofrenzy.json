@@ -9,5 +9,6 @@
     "Vue.js",
     "ArcGIS",
     "python-flask"
-  ]
+  ],
+  "logo": "/uploads/geofrenzy_logo.png"
 }
