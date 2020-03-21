@@ -9,5 +9,7 @@
     "GraphQL",
     "AWS"
   ],
-  "main_image": "/uploads/my-cb550k.jpg"
+  "main_image": "/uploads/my-cb550k.jpg",
+  "logo": "/uploads/chick_fil_a_logo.png",
+  "active": true
 }
