@@ -10,5 +10,6 @@
     "Redux thunk",
     "Google maps",
     "offline capable"
-  ]
+  ],
+  "logo": "/uploads/gulfstream_logo.png"
 }
