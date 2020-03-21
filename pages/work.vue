@@ -16,6 +16,13 @@ export default {
   asyncData(context) {
     console.log(context)
     // send config for the fab button to vuex
+  },
+  mounted() {
+    this.$ga.page({
+      page: '/work',
+      title: 'Work page',
+      location: window.location.href
+    })
   }
   // transition: 'slide-left'
 }

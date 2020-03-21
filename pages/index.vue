@@ -26,13 +26,19 @@
   </v-layout>
 </template>
 
-<script lang="ts">
-import { Context } from 'vm'
+<script>
 export default {
   // transition: 'slide-left',
-  asyncData(context: Context) {
+  asyncData(context) {
     console.log(context)
     // send config for the fab button to vuex
+  },
+  mounted() {
+    this.$ga.page({
+      page: '/',
+      title: 'Home page',
+      location: window.location.href
+    })
   },
   head() {
     return {
