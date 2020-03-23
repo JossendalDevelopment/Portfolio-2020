@@ -14,11 +14,11 @@ collections:
     format: 'json'
     folder: 'assets/content/projects'
     create: true
-    slug: '{{uuid}}-{{slug}}'
-    # slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
     fields:
+      - { label: "Id", name: id, widget: string, required: true }
       - { label: "Active", name: "active", widget: "boolean", default: true, required: false}
       - { label: "Priority", name: "priority", widget: "number", default: null, required: false}
       - { label: 'Title', name: 'title', widget: 'string' }
