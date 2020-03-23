@@ -1,14 +1,15 @@
 {
+  "priority": 1,
   "active": true,
+  "logo": "/uploads/av_vegas_logo.png",
   "date": "2020-03-21T19:49:43.870Z",
-  "title": "Bridal Spectacular",
-  "description": "Admin application and user portal app for managing your accounts. All in React.js",
-  "type": "work",
   "url": "",
   "tech": [
     "React",
     "Dotnet Core",
     "Wordpress"
   ],
-  "logo": "/uploads/av_vegas_logo.png"
+  "title": "Bridal Spectacular",
+  "type": "work",
+  "description": "Admin application and user portal app for managing your accounts. All in React.js"
 }
