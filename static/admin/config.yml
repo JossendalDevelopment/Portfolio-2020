@@ -18,8 +18,9 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Active", name: "active", widget: "boolean", default: true, required: false}
-      - {label: "Priority", name: "priority", widget: "number", default: null, required: false}
+      - { label: "Id", name: id, widget: hidden, default: "{{uuid}}" }
+      - { label: "Active", name: "active", widget: "boolean", default: true, required: false}
+      - { label: "Priority", name: "priority", widget: "number", default: null, required: false}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }

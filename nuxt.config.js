@@ -115,6 +115,15 @@ export default {
       }
     }
   },
+  router: {
+    // extendedRoutes(routes, resolve) {
+    //   routes.push({
+    //     name: '',
+    //     path: '',
+    //     component: resolve(__dirname, 'pages/projects/template.vue')
+    //   })
+    // }
+  },
   /*
    ** Build configuration
    */
