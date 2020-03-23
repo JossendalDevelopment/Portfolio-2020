@@ -1,6 +1,5 @@
 <template>
   <v-container fluid>
-    <!-- <v-col column align-center class="justify-center"> -->
     <v-row class="justify-center">
       <h3 style="font-size: 3rem; color: var(--v-secondary-base)">Clients</h3>
     </v-row>
@@ -13,15 +12,14 @@
             :src="project.logo"
             :alt="project.title + '_icon'"
             aspect-ratio="16 / 9"
-            max-height="20rem"
-            min-height="20rem"
+            max-height="10rem"
+            min-height="10rem"
             min-width="33%"
             contain
           />
         </v-row>
       </v-col>
     </v-row>
-    <!-- </v-col> -->
   </v-container>
 </template>
 <script>

@@ -16,10 +16,10 @@ export default {
     'work--recents': WorkRecents,
     'work--clients': WorkClients
   },
-  asyncData(context) {
-    console.log(context)
-    // send config for the fab button to vuex
-  },
+  // asyncData(context) {
+  // console.log(context)
+  // send config for the fab button to vuex
+  // },
   mounted() {
     this.$ga.page({
       page: '/work',

@@ -1,6 +1,6 @@
 <template>
-  <v-app style="background: none;">
-    <div class="app_error_container">
+  <v-app style="background: var(--v-primary-base)">
+    <div class="app-error-container">
       <h1 v-if="error.statusCode === 404">
         {{ pageNotFound }}
       </h1>
@@ -8,8 +8,13 @@
         {{ otherError }}
       </h1>
       <!-- <NuxtLink to="/"> -->
-      <v-btn to="/" color="secondary" large raised style="font-size: 2rem;"
-        >Home</v-btn
+      <v-btn
+        color="secondary"
+        large
+        raised
+        style="font-size: 2rem;"
+        @click="$router.go(-1)"
+        >Go Back</v-btn
       >
       <!-- </NuxtLink> -->
     </div>
@@ -42,14 +47,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app_error_container {
+.app-error-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
-}
-h1 {
-  font-size: 6rem;
+  h1 {
+    font-size: 6rem;
+  }
 }
 </style>

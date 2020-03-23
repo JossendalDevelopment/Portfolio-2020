@@ -2,7 +2,7 @@
   <v-container fluid class="fill-height">
     <v-row align="center" justify="center">
       <v-col cols="12" align="center">
-        <div v-flex>{{ project.title }}</div>
+        <div>{{ project.title }}</div>
         <p>{{ project.description }}</p>
       </v-col>
     </v-row>

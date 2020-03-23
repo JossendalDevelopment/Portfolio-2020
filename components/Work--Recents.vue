@@ -1,11 +1,11 @@
 <template>
   <v-container fluid>
-    <v-row class="justify-center">
+    <v-row justify="center">
       <h3 style="font-size: 3rem; color: var(--v-secondary-base)">
         Recent Projects
       </h3>
     </v-row>
-    <v-row class="align-center">
+    <v-row align="center">
       <v-col>
         <div v-if="projects.length > 0" class="changelog-list">
           <div class="line"></div>
@@ -42,7 +42,13 @@ export default {
   },
   computed: {
     projects() {
-      return this.$projects().projects
+      // console.log(
+      //   'TTTTT',
+      //   this.$projects().projects.sort((a, b) => a.priority < b.priority)
+      // )
+      return [...this.$projects().projects]
+        .filter((p) => p.active)
+        .sort((a, b) => (a.priority > b.priority ? 1 : -1))
     }
   },
   mounted() {

@@ -1,7 +1,7 @@
 <template>
   <div class="text-center inner-container">
     <div class="left">
-      <h1 class="animate-left work work__left">
+      <h1 class="work work__left">
         Wo
       </h1>
       <span ref="scrollarrow" class="scroll-arrow">
@@ -9,7 +9,7 @@
       </span>
     </div>
     <div class="right">
-      <h1 class="animate-right work work__right">rk.</h1>
+      <h1 class="work work__right">rk.</h1>
       <blockquote class="blockquote">
         &#8220;First, solve the problem. Then, write the code.&#8221;
         <footer>
@@ -68,17 +68,19 @@ export default {
   display: flex;
   position: absolute;
   height: 100vh;
-  font-size: 7rem;
+  font-size: 10rem;
   &__left {
     top: 35%;
     right: 0rem;
     color: var(--v-accent-base);
+    animation: moveInDown 1s ease-in;
   }
   &__right {
-    top: 36.5%;
+    top: 37%;
     left: 0rem;
     z-index: -1;
     color: var(--v-secondary-base);
+    animation: moveInUp 1s ease-in;
   }
 }
 </style>
