@@ -1,0 +1,14 @@
+{
+  "id": "{{uuid}}",
+  "active": false,
+  "date": "2020-03-23T16:14:59.354Z",
+  "title": "Stirfry Republic",
+  "description": "E-commerce site bringing asian fusion cuisine to the people of Las Vegas.",
+  "type": "work",
+  "tech": [
+    "Laravel",
+    "Vue.js",
+    "Ionic4"
+  ],
+  "logo": "/uploads/sfr_logo.png"
+}
