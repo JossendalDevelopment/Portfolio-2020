@@ -1,9 +1,8 @@
 {
+  "priority": 3,
   "active": true,
+  "logo": "/uploads/gulfstream_logo.png",
   "date": "2020-03-20T18:58:09.452Z",
-  "title": "Gulfstream 24hr Support",
-  "description": "Offline capable React Native app assisting with all customer and mechanical service needs of Gulfstream owners and operators..",
-  "type": "work",
   "url": "https://play.google.com/store/apps/details?id=com.gulfstream.tfhrsupport&hl=en",
   "tech": [
     "React Native",
@@ -11,5 +10,7 @@
     "Google maps",
     "offline capable"
   ],
-  "logo": "/uploads/gulfstream_logo.png"
+  "title": "Gulfstream 24hr Support",
+  "type": "work",
+  "description": "Offline capable React Native app assisting with all customer and mechanical service needs of Gulfstream owners and operators.."
 }
