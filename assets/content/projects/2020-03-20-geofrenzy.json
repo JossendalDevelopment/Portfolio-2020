@@ -1,14 +1,15 @@
 {
+  "priority": 4,
   "active": true,
+  "logo": "/uploads/geofrenzy_logo.png",
   "date": "2020-03-20T18:55:12.990Z",
-  "title": "GeoFrenzy",
-  "description": "Geofencing for everyone. Start defining your own rules on your own spaces today. All you need is a geodomain to get started.",
-  "type": "work",
   "url": "https://www.smartfences.place",
   "tech": [
     "Vue.js",
     "ArcGIS",
     "python-flask"
   ],
-  "logo": "/uploads/geofrenzy_logo.png"
+  "title": "GeoFrenzy",
+  "type": "work",
+  "description": "Geofencing for everyone. Start defining your own rules on your own spaces today. All you need is a geodomain to get started."
 }
