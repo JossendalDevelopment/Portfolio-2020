@@ -1,15 +1,16 @@
 {
+  "priority": 2,
+  "active": true,
+  "logo": "/uploads/chick_fil_a_logo.png",
   "date": "2020-03-20T00:04:09.806Z",
-  "title": "Chick-Fil-A",
-  "description": "Mobile toolkit for streamlining the onboarding of new employees, managing daily tasks, and creating operational checklists.",
-  "type": "work",
+  "main_image": "/uploads/my-cb550k.jpg",
   "tech": [
     "React Native",
     "Typescript",
     "GraphQL",
     "AWS"
   ],
-  "main_image": "/uploads/my-cb550k.jpg",
-  "logo": "/uploads/chick_fil_a_logo.png",
-  "active": true
+  "title": "Chick-Fil-A",
+  "type": "work",
+  "description": "Mobile toolkit for streamlining the onboarding of new employees, managing daily tasks, and creating operational checklists."
 }
