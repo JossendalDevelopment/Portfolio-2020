@@ -10,22 +10,24 @@
         <div v-if="projects.length > 0" class="changelog-list">
           <div class="line"></div>
           <div
-            v-for="repo in projects"
-            :key="repo.title"
+            v-for="project in projects"
+            :key="project.id"
             class="changelog-item not-showing"
           >
-            <div style="flex-direction: column;">
-              <p class="repo-name">{{ repo.title }}</p>
-              <p class="repo-desc">{{ repo.description }}</p>
-            </div>
+            <nuxt-link :to="`/projects/${project.id}`">
+              <div style="flex-direction: column;">
+                <p class="repo-name">{{ project.title }}</p>
+                <p class="repo-desc">{{ project.description }}</p>
+              </div>
+            </nuxt-link>
           </div>
         </div>
-        <div v-else>
+        <!-- <div v-else>
           <p class="error-message">
             Sorry, the dev team must be out to lunch or something... Check back
             later.
           </p>
-        </div>
+        </div> -->
       </v-col>
     </v-row>
   </v-container>
@@ -34,7 +36,6 @@
 export default {
   data() {
     return {
-      repos: [],
       observer: null,
       working: true
     }

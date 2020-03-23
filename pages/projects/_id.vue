@@ -1,20 +1,26 @@
 <template>
-  <p>page</p>
+  <v-container fluid class="fill-height">
+    <v-row align="center" justify="center">
+      <v-col cols="12" align="center">
+        <div v-flex>{{ project.title }}</div>
+        <p>{{ project.description }}</p>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 <script>
 export default {
   validate({ params }) {
-    return !isNaN(+params.id)
+    return !!params.id
   },
-  async asyncData({ params, error }) {
-    try {
-      console.log('PARAMS', params)
-      // const { data } = await axios.get(`https://jsonplaceholder.typicode.com/users/${+params.id}`)
-      await 'wait'
-      return
-    } catch (e) {
-      error({ message: 'User not found', statusCode: 404 })
-    }
+  asyncData({ params, error, store }) {
+    // console.log('PARAMS', params, store)
+    // const project = this.$projects().projects.filter((p) => p.id === params.id)
+    const project = store.state.modules.projects.projects.find(
+      (p) => p.id === params.id
+    )
+    console.log('PROJECT', project)
+    return { project }
   }
 }
 </script>

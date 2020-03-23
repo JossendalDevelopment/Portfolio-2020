@@ -11,11 +11,23 @@ a {
 }
 .home-link, .work-link, .play-link {
   font-size: 2rem;
-  animation-fill-mode: backwards;
+  position: relative;
+  // animation-fill-mode: backwards;
   width: 100%;
   text-align: center;
-  &:hover {
-    background: linear-gradient(180deg, var(--v-accent-lighten1), 50%, rgba(0,0,0,0%) 50%);
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 50%;
+    right: 100%;
+    background-color: var(--v-accent-lighten1);
+    transition: right 0.3s;
+    z-index: -1;
+  }
+  &:hover::after {
+    right: 0px;
   }
 }
 .animate-left {
@@ -23,6 +35,9 @@ a {
 }
 .animate-right{
   animation: moveInLeftLong 0.8s ease-out;
+}
+.animate-grow-width {
+  animation: growWidth 0.3s ease-in;
 }
 // .home-link {
 //   animation: moveInRight 0.5s ease-out;

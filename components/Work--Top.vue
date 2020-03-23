@@ -33,6 +33,8 @@ export default {
   },
   methods: {
     handleScroll() {
+      if (!this.$refs.scrollarrow) return
+
       if (window.scrollY < 10) {
         this.$refs.scrollarrow.classList.remove('hide')
       } else if (!this.$refs.scrollarrow.classList.value.includes('hide')) {
