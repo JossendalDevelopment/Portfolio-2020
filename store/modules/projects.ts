@@ -9,6 +9,8 @@ export const state = (): IProjectsState => ({
   projects: []
 })
 
+export type ProjectsModuleState = ReturnType<typeof state>
+
 export const getters = (state: IProjectsState): IProject[] => {
   return state.projects
 }

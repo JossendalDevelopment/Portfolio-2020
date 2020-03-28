@@ -44,9 +44,9 @@ export default {
     projects() {
       // console.log(
       //   'TTTTT',
-      //   this.$projects().projects.sort((a, b) => a.priority < b.priority)
+      //   this.$projects.projects.sort((a, b) => a.priority < b.priority)
       // )
-      return [...this.$projects().projects]
+      return [...this.$projects.projects]
         .filter((p) => p.active)
         .sort((a, b) => (a.priority > b.priority ? 1 : -1))
     }

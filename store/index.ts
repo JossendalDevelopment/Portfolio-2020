@@ -1,8 +1,13 @@
 import { Store } from 'vuex'
-import { IProject } from '../Interfaces/IProject'
+
+import { ProjectsModuleState } from './modules/projects'
+import { BlogsModuleState } from './modules/blogs'
+
+interface RootState extends ProjectsModuleState, BlogsModuleState {}
 
 export const actions = {
-  async nuxtServerInit({ dispatch }: Store<IProject>) {
-    await dispatch('modules/projects/fetchProjects')
+  async nuxtServerInit(store: Store<RootState>) {
+    await store.dispatch('modules/projects/fetchProjects')
+    await store.dispatch('modules/projects/fetchBlogs')
   }
 }

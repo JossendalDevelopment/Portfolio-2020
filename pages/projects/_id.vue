@@ -15,11 +15,10 @@ export default {
   },
   asyncData({ params, error, store }) {
     // console.log('PARAMS', params, store)
-    // const project = this.$projects().projects.filter((p) => p.id === params.id)
+    // const project = this.$projects.projects.filter((p) => p.id === params.id)
     const project = store.state.modules.projects.projects.find(
       (p) => p.id === params.id
     )
-    console.log('PROJECT', project)
     return { project }
   }
 }

@@ -26,7 +26,7 @@
 export default {
   computed: {
     projects() {
-      return this.$projects().projects
+      return this.$projects.projects
     }
   }
 }
