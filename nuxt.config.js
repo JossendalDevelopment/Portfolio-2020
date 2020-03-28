@@ -109,6 +109,7 @@ export default {
           brown: '#383432',
           black: '#222222',
           white: '#fefefe',
+          blue: '#59779c',
           error: '#FF5252',
           info: '#2196F3',
           success: '#4CAF50',

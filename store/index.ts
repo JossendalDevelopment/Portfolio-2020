@@ -8,6 +8,6 @@ interface RootState extends ProjectsModuleState, BlogsModuleState {}
 export const actions = {
   async nuxtServerInit(store: Store<RootState>) {
     await store.dispatch('modules/projects/fetchProjects')
-    await store.dispatch('modules/projects/fetchBlogs')
+    await store.dispatch('modules/blogs/fetchBlogs')
   }
 }

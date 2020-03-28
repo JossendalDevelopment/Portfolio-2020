@@ -22,7 +22,7 @@ export const mutations = {
 }
 
 export const actions = {
-  async fetchProjects({ commit }: Store<IBlog>) {
+  async fetchBlogs({ commit }: Store<IBlog>) {
     const files = await require.context(
       '~/assets/content/blogs/',
       false,
