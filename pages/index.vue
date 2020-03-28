@@ -1,5 +1,6 @@
 <template>
   <v-layout column justify-center align-center class="inner-container">
+    <nav-button color="primary" />
     <v-flex xs9></v-flex>
     <v-flex
       xs3
@@ -27,8 +28,12 @@
 </template>
 
 <script>
+import NavButtonVue from '../components/NavButton.vue'
 export default {
   // transition: 'slide-left',
+  components: {
+    'nav-button': NavButtonVue
+  },
   asyncData(context) {
     console.log(context)
     // send config for the fab button to vuex

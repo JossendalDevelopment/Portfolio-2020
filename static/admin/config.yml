@@ -49,3 +49,41 @@ collections:
             }
           }
         }
+  - name: 'blogs'
+    label: 'Blogs'
+    format: 'json'
+    folder: 'assets/content/blogs'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: "Id", name: id, widget: string, required: true }
+      - { label: "Active", name: "active", widget: "boolean", default: true, required: false}
+      - { label: "Priority", name: "priority", widget: "number", default: null, required: false}
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { 
+          label: 'Featured Image', 
+          name: 'featured_image', 
+          widget: 'image', 
+          required: false,
+          media_library: {
+            config: {
+              multiple: false
+            }
+          }
+        }
+      - { 
+          label: 'Featured Images', 
+          name: 'featured_images', 
+          widget: 'image', 
+          required: false,
+          media_library: {
+            config: {
+              multiple: true
+            }
+          }
+        }

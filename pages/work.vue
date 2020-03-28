@@ -1,5 +1,6 @@
 <template>
   <v-container fluid class="container">
+    <nav-button color="accent" />
     <work--top />
     <work--recents />
     <work--clients />
@@ -9,12 +10,14 @@
 import WorkTop from '../components/Work--Top.vue'
 import WorkRecents from '../components/Work--Recents.vue'
 import WorkClients from '../components/Work--Clients.vue'
+import NavButtonVue from '../components/NavButton.vue'
 
 export default {
   components: {
     'work--top': WorkTop,
     'work--recents': WorkRecents,
-    'work--clients': WorkClients
+    'work--clients': WorkClients,
+    'nav-button': NavButtonVue
   },
   // asyncData(context) {
   // console.log(context)

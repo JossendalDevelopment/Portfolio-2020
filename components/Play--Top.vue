@@ -6,14 +6,14 @@
         <p>of recent clients and the work we did for them.</p>
       </div>
       <h1 class="work work__left">
-        Wo
+        Pl
       </h1>
       <span ref="scrollarrow" class="scroll-arrow">
         <span class="arrow-point">&larr;</span> scroll
       </span>
     </v-col>
     <v-col class="right">
-      <h1 class="work work__right">rk.</h1>
+      <h1 class="work work__right">ay.</h1>
       <blockquote class="blockquote">
         &#8220;First, solve the problem. Then, write the code.&#8221;
         <footer>
@@ -50,12 +50,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .inner-container {
-  // display: flex;
   height: 100vh;
 }
 .left,
 .right {
-  // width: 50%;
   height: 97.5%;
   position: relative;
 }
@@ -67,7 +65,7 @@ export default {
   z-index: 1;
 }
 .right {
-  background-color: var(--v-accent-base);
+  background-color: var(--v-black-base);
   z-index: 0;
 }
 .work {
@@ -78,14 +76,14 @@ export default {
   &__left {
     top: 35%;
     right: 0rem;
-    color: var(--v-accent-base);
+    color: var(--v-black-base);
     animation: moveInDown 1s ease-in;
   }
   &__right {
     top: 37%;
     left: 0rem;
     z-index: -1;
-    color: var(--v-secondary-base);
+    color: var(--v-accent-base);
     animation: moveInUp 1s ease-in;
   }
 }

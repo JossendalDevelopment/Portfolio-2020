@@ -107,6 +107,8 @@ export default {
           anchor: '#363636',
           accent: '#fd7752',
           brown: '#383432',
+          black: '#222222',
+          white: '#fefefe',
           error: '#FF5252',
           info: '#2196F3',
           success: '#4CAF50',
