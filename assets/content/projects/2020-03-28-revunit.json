@@ -1,0 +1,20 @@
+{
+  "active": true,
+  "logo": "/uploads/revunit_logo.png",
+  "date": "2020-03-28T01:28:09.679Z",
+  "url": "https://revunit.com/",
+  "tech": [
+    "Vue.js",
+    "Docker",
+    "Node.js",
+    "Express",
+    "React Native",
+    "AWS",
+    "GraphQL",
+    "PostgresSQL"
+  ],
+  "title": "RevUnit",
+  "type": "work",
+  "id": "16f081dd-7999-4faa-81b7-5c4d2edc96b0",
+  "description": "Agency work across several projects"
+}
